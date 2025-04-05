@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Select Your Device</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
 
   <style>
+    :root {
+      --bg-dark: #1e1e2e;
+      --card-bg: #2e2e3e;
+      --accent: #8aadf4;
+      --text-light: #ffffff;
+      --text-muted: #a6accd;
+      --hover-bg: #393955;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #2c3e50, #3498db);
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -26,9 +39,10 @@
     }
 
     h1 {
-      margin-bottom: 40px;
       font-size: 2.5rem;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      margin-bottom: 40px;
+      color: var(--text-light);
+      text-align: center;
     }
 
     .button-group {
@@ -39,40 +53,52 @@
     }
 
     .device-card {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px 30px;
+      background-color: var(--card-bg);
+      padding: 25px 30px;
       border-radius: 16px;
       text-align: center;
       cursor: pointer;
-      transition: all 0.3s ease;
-      width: 140px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease;
+      width: 150px;
+      border: 1px solid #444;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     .device-card:hover {
-      transform: scale(1.05);
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: var(--hover-bg);
+      transform: translateY(-4px);
     }
 
     .device-card i {
       font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #fff;
+      color: var(--accent);
+      margin-bottom: 12px;
     }
 
     .device-card span {
+      display: block;
       font-size: 1.1rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-muted);
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
+        margin-bottom: 20px;
       }
+
       .device-card {
         width: 120px;
-        padding: 15px 20px;
+        padding: 20px;
+      }
+
+      .device-card i {
+        font-size: 2rem;
+      }
+
+      .device-card span {
+        font-size: 1rem;
       }
     }
   </style>
