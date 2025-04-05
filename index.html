@@ -1,2 +1,53 @@
-# vpndnsprovider.github.io
-New
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Your Device</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .button-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .device-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .device-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select Your Device</h1>
+  <div class="button-group">
+    <button class="device-button" onclick="location.href='android.html'">Android</button>
+    <button class="device-button" onclick="location.href='mac.html'">macOS</button>
+    <button class="device-button" onclick="location.href='linux.html'">Linux</button>
+    <button class="device-button" onclick="location.href='windows.html'">Windows</button>
+  </div>
+
+</body>
+</html>
