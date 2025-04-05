@@ -4,38 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Select Your Device</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      margin: 0;
     }
+
     h1 {
       margin-bottom: 40px;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     }
+
     .button-group {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
     }
-    .device-button {
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
+
+    .device-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 16px;
+      text-align: center;
       cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      width: 140px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
-    .device-button:hover {
-      background-color: #0056b3;
+
+    .device-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .device-card i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .device-card span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .device-card {
+        width: 120px;
+        padding: 15px 20px;
+      }
     }
   </style>
 </head>
@@ -43,10 +81,22 @@
 
   <h1>Select Your Device</h1>
   <div class="button-group">
-    <button class="device-button" onclick="location.href='android.html'">Android</button>
-    <button class="device-button" onclick="location.href='mac.html'">macOS</button>
-    <button class="device-button" onclick="location.href='linux.html'">Linux</button>
-    <button class="device-button" onclick="location.href='windows.html'">Windows</button>
+    <div class="device-card" onclick="location.href='android.html'">
+      <i class="fab fa-android"></i>
+      <span>Android</span>
+    </div>
+    <div class="device-card" onclick="location.href='mac.html'">
+      <i class="fab fa-apple"></i>
+      <span>macOS</span>
+    </div>
+    <div class="device-card" onclick="location.href='linux.html'">
+      <i class="fab fa-linux"></i>
+      <span>Linux</span>
+    </div>
+    <div class="device-card" onclick="location.href='windows.html'">
+      <i class="fab fa-windows"></i>
+      <span>Windows</span>
+    </div>
   </div>
 
 </body>
