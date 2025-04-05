@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WireGuard for Linux</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #1e1e2e; color: #fff; padding: 40px; }
+    h1 { color: #8aadf4; }
+    code, pre { background: #2e2e3e; padding: 6px 10px; border-radius: 4px; display: block; }
+    a { color: #8aadf4; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Install WireGuard on Linux</h1>
+  <p>For Debian/Ubuntu:</p>
+  <pre>sudo apt update && sudo apt install wireguard</pre>
+  <p>For Arch Linux:</p>
+  <pre>sudo pacman -S wireguard-tools</pre>
+  <p>For Fedora:</p>
+  <pre>sudo dnf install wireguard-tools</pre>
+  <h2>Import and Activate Configuration</h2>
+  <pre>sudo wg-quick up /path/to/config.conf</pre>
+  <p>To deactivate:</p>
+  <pre>sudo wg-quick down /path/to/config.conf</pre>
+  <p><a href="index.html">← Back to Home</a></p>
+</body>
+</html>
